@@ -17,7 +17,6 @@ file_path = 'LAB_2/AIDM_Lab2-A2.4/aw_fb_data.csv'
 
 data = pd.read_csv(file_path, delimiter=',')
 
-# copy the data
 df = data.copy()
 
 # drop duplicates of the same participant based on age, gender, height
@@ -54,7 +53,8 @@ ax[0, 1].set_xlabel('Participant')
 ax[0, 1].legend()
 
 # Stackplot for Age, Height, Weight
-ax[1, 1].stackplot(df.index, df['age'], df['height'], df['weight'], labels=['Age', 'Height', 'Weight'])
+ax[1, 1].stackplot(df.index, df['age'], df['height'], df['weight'], 
+                   colors=['blue', 'green', 'red'] ,labels=['Age', 'Height', 'Weight'])
 ax[1, 1].set_title('Age, Height, Weight of participants')
 ax[1, 1].set_ylabel('Age, Height, Weight')
 ax[1, 1].set_xlabel('Participant')

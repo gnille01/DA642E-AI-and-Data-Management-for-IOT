@@ -18,7 +18,6 @@ data = pd.read_csv(file_path, delimiter=',')
 
 print(data['calories']) 
 
-# copy the data
 transform = data.copy()
 
 # subplots
